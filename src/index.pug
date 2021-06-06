@@ -1,0 +1,90 @@
+doctype html
+html(lang="ja")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(property='og:url' content='https://www.your-domain.com/your-page.html')
+        meta(property='og:type' content='website')
+        meta(property='og:title' content='Your Website Title')
+        meta(property='og:description' content='Your description')
+        meta(property='og:image' content='https://www.your-domain.com/path/image.jpg')
+        title アジア女子旅研究会
+        link(rel="stylesheet", href="css/init.css")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        script(src="https://unpkg.com/swiper/swiper-bundle.min.js") 
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")   
+    body
+        header
+            div.inner
+                div.logo: b Si#[span g]ht#[span se]eing
+            ul.header_links
+                li #[a(href="#content") Content]
+                li #[a(href="#howto") How to apply]
+                li #[a(href="#form") Form]
+                li #[a(href="#follow") Follow us]
+        main 
+            article 
+                section.hero 
+                    div.hero_bg
+                        div.inner 
+                            h2.hero_ttl アジア<br>
+                                        |女子旅<br>
+                                        |研究会
+                            p.hero_lead Unforgettable Experience Just For You
+
+                section.content 
+                    ul.content_list 
+                        li.content_item 
+                            div.content_box 
+                                h2.content_txt.fade 食べる、飲む
+                        li.content_item 
+                            div.content_box 
+                                h2.content_txt.fade 人に出会って
+                        li.content_item 
+                            div.content_box 
+                                h2.content_txt.fade 文化に触れる
+                section.howto 
+                    .howto_bg 
+                        .inner
+                            h2.howto_ttl 応募方法
+                            .swiper-container.tab-menu 
+                                ul.swiper-wrapper
+                                  li.swiper-slide MAIL
+                                  li.swiper-slide CALL
+                            .swiper-container.tab-content
+                                ul.swiper-wrapper 
+                                    li.swiper-slide 
+                                        h3.howto_ttl Mail here
+                                        p.howto_txt xxxxx@gmail.com
+                                    li.swiper-slide 
+                                        h3.howto_ttl Call here
+                                        p.howto_txt 090-xxxx-xxxx
+                            a(href='https://www.freepik.com/vectors/background') Background vector created by GarryKillian - www.freepik.com
+
+
+
+        aside 
+            section.sns 
+                div.share_btn   
+                    a.js-modal-open(href="") #[img(src="img/cheetah.png", alt="SNSボタン") ]
+
+                div.modal.js-modal 
+                    div.modal__bg.js-modal-close 
+                    div.modal__content 
+                        ul.share_list 
+                            li.share_item insta
+                            li.share_item twitter 
+                            li.share_item facebook 
+                            a.js-modal-close(href="") 閉じる
+
+        footer 
+            div.inner 
+                p.footer-txt footer contents 
+                p.footer-txt footer contents 
+
+        script(src="js/function.js") 
+
