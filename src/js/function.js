@@ -15,10 +15,12 @@ gsap.utils.toArray(".fade").forEach(function(el){
   $(function(){
     $('.js-modal-open').on('click',function(){
         $('.js-modal').fadeIn();
+        $('.js-modal-close').addClass('open');
         return false;
     });
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
+        $('.js-modal-close').removeClass('open');
         return false;
     });
 });

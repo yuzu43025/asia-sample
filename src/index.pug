@@ -20,7 +20,7 @@ html(lang="ja")
     body
         header
             div.inner
-                div.logo: b Si#[span g]ht#[span se]eing
+                div.sightseeing: b Si#[span g]ht#[span se]eing
             ul.header_links
                 li #[a(href="#content") Content]
                 li #[a(href="#howto") How to apply]
@@ -51,21 +51,21 @@ html(lang="ja")
                     .howto_bg 
                         .inner
                             h2.howto_ttl 応募方法
-                            .swiper-container.tab-menu 
+                            .swiper.tab-menu 
                                 ul.swiper-wrapper
                                   li.swiper-slide MAIL
                                   li.swiper-slide CALL
-                            .swiper-container.tab-content
+                            .swiper.tab-content
                                 ul.swiper-wrapper 
                                     li.swiper-slide 
-                                        h3.howto_ttl Mail here
+                                        .ico 
+                                            img(src="img/email.png", alt="")
                                         p.howto_txt xxxxx@gmail.com
                                     li.swiper-slide 
-                                        h3.howto_ttl Call here
+                                        .ico 
+                                            img(src="img/phone.png", alt="")
                                         p.howto_txt 090-xxxx-xxxx
-                            a(href='https://www.freepik.com/vectors/background') Background vector created by GarryKillian - www.freepik.com
-
-
+                            p.footer-txt Copyright © 2021 Izumi Miki. All rights reserved.
 
         aside 
             section.sns 
@@ -74,17 +74,28 @@ html(lang="ja")
 
                 div.modal.js-modal 
                     div.modal__bg.js-modal-close 
-                    div.modal__content 
+                    div.modal__content
+                        div.share_neon: b Sh#[span a]r#[span e]
                         ul.share_list 
-                            li.share_item insta
-                            li.share_item twitter 
-                            li.share_item facebook 
-                            a.js-modal-close(href="") 閉じる
+                            li.share_item 
+                                .logo
+                                    a(href="#")
+                                        img(src="img/insta.png", alt="instagram") 
+                            li.share_item 
+                                .logo
+                                    a(href="#")
+                                        img(src="img/facebook.png", alt="facebook") 
+                            li.share_item
+                                .logo
+                                    a(href="#")
+                                        img(src="img/twitter.png", alt="twitter") 
 
-        footer 
-            div.inner 
-                p.footer-txt footer contents 
-                p.footer-txt footer contents 
+                            .js-modal-close
+                                .js-modal-close-inner
+                                    span
+                                    span
+                                    span
+
 
         script(src="js/function.js") 
 
