@@ -23,7 +23,7 @@
 <body>
     <header>
         <div class="inner">
-            <div class="logo"><b>Si<span>g</span>ht<span>se</span>eing</b></div>
+            <div class="sightseeing"><b>Si<span>g</span>ht<span>se</span>eing</b></div>
         </div>
         <ul class="header_links">
             <li><a href="#content">Content</a></li>
@@ -68,24 +68,25 @@
                 <div class="howto_bg">
                     <div class="inner">
                         <h2 class="howto_ttl">応募方法</h2>
-                        <div class="swiper-container tab-menu">
+                        <div class="swiper tab-menu">
                             <ul class="swiper-wrapper">
                                 <li class="swiper-slide">MAIL</li>
                                 <li class="swiper-slide">CALL</li>
                             </ul>
                         </div>
-                        <div class="swiper-container tab-content">
+                        <div class="swiper tab-content">
                             <ul class="swiper-wrapper">
                                 <li class="swiper-slide">
-                                    <h3 class="howto_ttl">Mail here</h3>
+                                    <div class="ico"> <img src="img/email.png" alt=""></div>
                                     <p class="howto_txt">xxxxx@gmail.com</p>
                                 </li>
                                 <li class="swiper-slide">
-                                    <h3 class="howto_ttl">Call here</h3>
+                                    <div class="ico"> <img src="img/phone.png" alt=""></div>
                                     <p class="howto_txt">090-xxxx-xxxx</p>
                                 </li>
                             </ul>
                         </div>
+                        <p class="footer-txt">Copyright © 2021 Izumi Miki. All rights reserved.</p>
                     </div>
                 </div>
             </section>
@@ -97,21 +98,25 @@
             <div class="modal js-modal">
                 <div class="modal__bg js-modal-close"> </div>
                 <div class="modal__content">
+                    <div class="share_neon"><b>Sh<span>a</span>r<span>e</span></b></div>
                     <ul class="share_list">
-                        <li class="share_item">insta</li>
-                        <li class="share_item">twitter </li>
-                        <li class="share_item">facebook </li><a class="js-modal-close" href="">閉じる</a>
+                        <li class="share_item">
+                            <div class="logo"><a href="#"><img src="img/insta.png" alt="instagram"></a></div>
+                        </li>
+                        <li class="share_item">
+                            <div class="logo"><a href="#"><img src="img/facebook.png" alt="facebook"></a></div>
+                        </li>
+                        <li class="share_item">
+                            <div class="logo"><a href="#"><img src="img/twitter.png" alt="twitter"></a></div>
+                        </li>
+                        <div class="js-modal-close">
+                            <div class="js-modal-close-inner"><span></span><span></span><span></span></div>
+                        </div>
                     </ul>
                 </div>
             </div>
         </section>
     </aside>
-    <footer>
-        <div class="inner">
-            <p class="footer-txt">footer contents </p>
-            <p class="footer-txt">footer contents </p>
-        </div>
-    </footer>
     <script src="js/function.js"> </script>
 </body>
 
