@@ -1,3 +1,13 @@
+$(function(){
+  $('a[href^="#"]').click(function(){
+      let speed = 500;
+      let href= $(this).attr("href");
+      let target = $(href == "#" || href == "" ? 'html' : href);
+      let position = target.offset().top ;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+  });
+});
 
 gsap.utils.toArray(".fade").forEach(function(el){
     gsap.from(el, {
@@ -16,48 +26,64 @@ gsap.utils.toArray(".fade").forEach(function(el){
     $('.js-modal-open').on('click',function(){
         $('.js-modal').fadeIn();
         $('.js-modal-close').addClass('open');
+        modalLock();
         return false;
     });
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
         $('.js-modal-close').removeClass('open');
+        modalLock();
         return false;
     });
 });
 
-//スクロールすると横から出てくる処理
+//モーダル背景ロック
+function modalLock(){
+  let wrapper = $('#wrapper');
+  let modalContents = $('.js-modal-close');
+  let modal_open = modalContents.hasClass('open');
+  if(modal_open) {
+    open_position = $(window).scrollTop();
+    wrapper.css({'width':'100%', 'position':'fixed', 'top': -(open_position)});
+  } else {
+    console.log(open_position);
+    wrapper.attr('style','');
+    $(window).scrollTop(open_position);
+  }
+}
+
 $(function() {
     var appear = false;
     var share = $('.share_btn');
     $(window).scroll(function () {
-      if ($(this).scrollTop() > 200) {  //200pxスクロールしたら
+      if ($(this).scrollTop() > 200) {  
         if (appear == false) {
           appear = true;
           share.stop().animate({
-            'right': '16px' //右から16pxの位置に
-          }, 300); //0.3秒かけて現れる
+            'right': '16px' 
+          }, 300); 
         }
       } else {
         if (appear) {
           appear = false;
           share.stop().animate({
-            'right': '-200px' //右から-200pxの位置に
-          }, 300); //0.3秒かけて隠れる
+            'right': '-200px'
+          }, 300); 
         }
       }
 
-    //以下フッター手前で止まる処理
-    scrollHeight = $(document).height(); //ドキュメントの高さ
-    scrollPosition = $(window).height() + $(window).scrollTop();//現在地 
-    footHeight = $('footer').innerHeight();//footerの高さ（＝止めたい位置）
+    
+    scrollHeight = $(document).height(); 
+    scrollPosition = $(window).height() + $(window).scrollTop();
+    footHeight = $('footer').innerHeight();
    
-    if ( scrollHeight - scrollPosition  <= footHeight ) {//ドキュメントの高さと現在地の差がfooterの高さ以下になったら
-        share.css({ //cssを書き換える
-            'position':'absolute',//pisitionをabsolute（親：wrapperからの絶対値）に変更
-            'bottom':footHeight,//下からfooterの高さ 
+    if ( scrollHeight - scrollPosition  <= footHeight ) {
+        share.css({ 
+            'position':'absolute',
+            'bottom':footHeight, 
         });
     } else {
-        share.css({ //スクロールして上に戻った場合は元に戻る
+        share.css({ 
           'position':'fixed',
           'bottom':'24px',
         });
@@ -68,7 +94,8 @@ $(function() {
 var tab = new Swiper('.tab-content', {
   //タブコンテンツ
   slidesPerView: 1,
-  autoHeight: true, 
+  // autoHeight: true, 
+  // autoWidth: true,
   
   //タブメニュー
   thumbs: {

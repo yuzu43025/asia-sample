@@ -22,79 +22,77 @@ html(lang="ja")
             div.inner
                 div.sightseeing: b Si#[span g]ht#[span se]eing
             ul.header_links
+                li #[a(href="#top") Top]
                 li #[a(href="#content") Content]
                 li #[a(href="#howto") How to apply]
-                li #[a(href="#form") Form]
-                li #[a(href="#follow") Follow us]
+                li.js-modal-open #[a(href="#Follow us") Follow us]
         main 
             article 
-                section.hero 
-                    div.hero_bg
-                        div.inner 
-                            h2.hero_ttl アジア<br>
-                                        |女子旅<br>
-                                        |研究会
-                            p.hero_lead Unforgettable Experience Just For You
+                div#wrapper
+                    div.sns 
+                        div.share_btn   
+                            a.js-modal-open(href="") #[img(src="img/cheetah.png", alt="SNSボタン") ]
 
-                section.content 
-                    ul.content_list 
-                        li.content_item 
-                            div.content_box 
-                                h2.content_txt.fade 食べる、飲む
-                        li.content_item 
-                            div.content_box 
-                                h2.content_txt.fade 人に出会って
-                        li.content_item 
-                            div.content_box 
-                                h2.content_txt.fade 文化に触れる
-                section.howto 
-                    .howto_bg 
-                        .inner
-                            h2.howto_ttl 応募方法
-                            .swiper.tab-menu 
-                                ul.swiper-wrapper
-                                  li.swiper-slide MAIL
-                                  li.swiper-slide CALL
-                            .swiper.tab-content
-                                ul.swiper-wrapper 
-                                    li.swiper-slide 
-                                        .ico 
-                                            img(src="img/email.png", alt="")
-                                        p.howto_txt xxxxx@gmail.com
-                                    li.swiper-slide 
-                                        .ico 
-                                            img(src="img/phone.png", alt="")
-                                        p.howto_txt 090-xxxx-xxxx
-                            p.footer-txt Copyright © 2021 Izumi Miki. All rights reserved.
+                        div.modal.js-modal 
+                            div.modal__content
+                                div.share_neon: b Sh#[span a]r#[span e]
+                                ul.share_list 
+                                    li.share_item 
+                                        .logo
+                                            a(href="#")
+                                                img(src="img/insta.png", alt="instagram") 
+                                    li.share_item 
+                                        .logo
+                                            a(href="#")
+                                                img(src="img/facebook.png", alt="facebook") 
+                                    li.share_item
+                                        .logo
+                                            a(href="#")
+                                                img(src="img/twitter.png", alt="twitter") 
 
-        aside 
-            section.sns 
-                div.share_btn   
-                    a.js-modal-open(href="") #[img(src="img/cheetah.png", alt="SNSボタン") ]
+                                    span.js-modal-close
 
-                div.modal.js-modal 
-                    div.modal__bg.js-modal-close 
-                    div.modal__content
-                        div.share_neon: b Sh#[span a]r#[span e]
-                        ul.share_list 
-                            li.share_item 
-                                .logo
-                                    a(href="#")
-                                        img(src="img/insta.png", alt="instagram") 
-                            li.share_item 
-                                .logo
-                                    a(href="#")
-                                        img(src="img/facebook.png", alt="facebook") 
-                            li.share_item
-                                .logo
-                                    a(href="#")
-                                        img(src="img/twitter.png", alt="twitter") 
+                    section.hero 
+                        div.hero_bg
+                            div.inner 
+                                h2.hero_ttl アジア<br>
+                                            |女子旅<br>
+                                            |研究会
+                                p.hero_lead Unforgettable Experience Just For You
 
-                            .js-modal-close
-                                .js-modal-close-inner
-                                    span
-                                    span
-                                    span
+                    section#content.content 
+                        ul.content_list 
+                            li.content_item 
+                                div.content_box 
+                                    h2.content_txt.fade 食べる、飲む
+                            li.content_item 
+                                div.content_box 
+                                    h2.content_txt.fade 人に出会って
+                            li.content_item 
+                                div.content_box 
+                                    h2.content_txt.fade 文化に触れる
+                    section#howto.howto 
+                        .howto_bg 
+                            .inner
+                                h2.howto_ttl 応募方法
+                                .swiper.tab-menu 
+                                    ul.swiper-wrapper
+                                        li.swiper-slide MAIL
+                                        li.swiper-slide CALL
+                                .swiper.tab-content
+                                    ul.swiper-wrapper 
+                                        li.swiper-slide 
+                                            .ico 
+                                                img(src="img/email.png", alt="")
+                                            p.howto_txt xxxxx@gmail.com
+                                        li.swiper-slide 
+                                            .ico 
+                                                img(src="img/phone.png", alt="")
+                                            p.howto_txt 090-xxxx-xxxx
+        footer
+            .footer-bg
+                .inner
+                    p.footer-txt Copyright © 2022 Izumi Miki. All rights reserved.
 
 
         script(src="js/function.js") 
